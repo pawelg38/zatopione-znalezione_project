@@ -1,6 +1,16 @@
-function Layout() {
+import MainNavigation from "./MainNavigation";
+import classes from './Layout.module.scss';
+import PageImageBar from "../PageImageBar";
+import Footer from "./Footer";
+
+function Layout(props) {
   return (
-    <div>layout component here!</div>
+    <div>
+      <MainNavigation />
+      <PageImageBar />
+      {props.children}
+      <Footer />
+    </div>
   );
 }
 

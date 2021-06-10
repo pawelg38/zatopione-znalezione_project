@@ -1,0 +1,30 @@
+.gradientMask {
+  background: rgb(45,58,64);
+  background:
+    linear-gradient(180deg, rgba(94,255,183,1) 40px, rgba(94,255,183,0) 200px),
+    linear-gradient(0deg, rgba(255,255,255,1) 40px, rgba(94,255,183,0) 200px);
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .logosBox {
+    //border: 1px solid red;
+    // width: 50px;
+    // height: 200px;
+    display: flex;
+    flex-direction: column;
+    img {
+      border: 5px solid #fff;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      // width: 50px;
+      // height: 50px;
+    }
+  }
+}
+.imageBar {
+  height: 500px;
+  background-image: url('../assets/images/img1_1920x1080.jpg');
+  background-position-y: -200px;
+}
