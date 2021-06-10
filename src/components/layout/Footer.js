@@ -20,8 +20,8 @@ function Footer() {
           <p>pat@listonosze.pl</p>
           <p>02-495 Warszawa</p>
           <div className={classes.circles}>
-            <div class={classes.circle}></div>
-            <div class={classes.circle}></div>
+            <div className={classes.circle}></div>
+            <div className={classes.circle}></div>
           </div>
         </div>
         <div className={classes.menuBox}>

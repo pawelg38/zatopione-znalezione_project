@@ -10,8 +10,8 @@ function MainNavigation() {
       </div>
       <div className={classes.links}>
         <Link to='/gallery'>Galeria</Link>
-        <Link to='/about-me'>O mnie</Link>
-        <Link to='/contact'>Kontakt</Link>
+        <Link to='/'>O mnie</Link>
+        <Link to='/'>Kontakt</Link>
       </div>
     </nav>
   );

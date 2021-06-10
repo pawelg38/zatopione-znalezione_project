@@ -78,7 +78,6 @@
 
       .seeMoreImg1 {
         height: 400px;
-        background-color: red;
         background-image: url('../assets/images/jv1.jpg');
         width: 50%;
       }
@@ -88,7 +87,6 @@
         position: absolute;
         left: 50%;
         background-image: url('../assets/images/jv2.jpg');
-        background-color: green;
         transform: skewX(-30deg) translateX(-50%);
         border-left: 50px solid #fff;
         border-right: 50px solid #fff;
@@ -96,7 +94,6 @@
       .seeMoreImg3 {
         height: 400px;
         width: 50%;
-        background-color: blue;
         background-image: url('../assets/images/jv3.jpg');
         background-position-x: right;
       }
