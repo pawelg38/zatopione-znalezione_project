@@ -22,6 +22,7 @@ function Footer() {
           <div className={classes.circles}>
             <div className={classes.circle}></div>
             <div className={classes.circle}></div>
+            <div className={classes.circle}></div>
           </div>
         </div>
         <div className={classes.menuBox}>

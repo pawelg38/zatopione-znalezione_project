@@ -1,0 +1,53 @@
+@media (min-width: 1440px) {
+  .sliderContainer {
+    display: none;
+  }
+}
+.sliderContainer {
+  height: 300px;
+  position: relative;
+
+  .imgBox {
+    height: 300px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      min-height: 300px;
+    }
+  }
+
+  .buttonsContainer {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      margin: 0 10px;
+      border: none;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+}
+.exampleEnter {
+  position: absolute;
+  left: 100%;
+}
+.exampleEnterActive {
+  left: 0%;
+  transition: all 1500ms linear;
+}
+.exampleExit {
+  position: absolute;
+  left: 0%;
+}
+.exampleExitActive {
+  left: -100%;
+  transition: all 1500ms linear;
+}

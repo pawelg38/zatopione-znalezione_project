@@ -1,4 +1,5 @@
 .footer {
+  z-index: 0;
 
   .mediaBanner {
     height: 300px;
@@ -40,16 +41,18 @@
   }
 
   .footerInfo {
-    height: 300px;
+    //height: 300px;
     background-color: rgb(172, 204, 193);
     margin-top: 50px;
     display: flex;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
+    padding: 50px 50px;
+    border: 1px solid red;
 
     .logoBox {
-      width: 40%;
-      padding: 50px 50px;
+      //width: 40%;
+      //padding: 50px 50px;
       
       h1 {
         color: #fff;
@@ -59,8 +62,8 @@
       }
     }
     .contactBox {
-      width: 30%;
-      padding-top: 50px;
+      //width: 30%;
+      //padding-top: 50px;
       h1 {
         color: green;
         font-size: 26px;
@@ -71,18 +74,18 @@
       }
       .circles {
         display: flex;
+        justify-content: space-between;
         .circle {
           width: 40px;
           height: 40px;
           background-color: #fff;
           border-radius: 50%;
-          margin-right: 20px;
         }
       }
     }
     .menuBox {
-      padding-top: 50px;
-      width: 30%;
+      //padding-top: 50px;
+      //width: 30%;
       h1 {
         color: green;
         font-size: 26px;
@@ -97,5 +100,15 @@
     text-align: center;
     padding: 10px 0;
     font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@media (min-width: 0px) {
+  .footerInfo {
+    flex-direction: column;
+    text-align: center;
+    
+    .contactBox {
+    }
   }
 }

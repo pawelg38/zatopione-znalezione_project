@@ -1,13 +1,15 @@
 import MainNavigation from "./MainNavigation";
-import classes from './Layout.module.scss';
 import PageImageBar from "../PageImageBar";
+import Header from './Header';
 import Footer from "./Footer";
 
 function Layout(props) {
+
   return (
     <div>
       <MainNavigation />
-      <PageImageBar />
+      <PageImageBar/>
+      <Header />
       {props.children}
       <Footer />
     </div>
