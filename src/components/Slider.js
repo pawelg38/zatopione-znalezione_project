@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import classes from './Slider.module.scss';
 
 function Slider() {
-  const [images, setImages] = useState([
+  const [images] = useState([
     {
       id: 1,
       url: 'https://images.unsplash.com/photo-1583167616102-d8d4b7d02c6c?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
@@ -26,7 +26,7 @@ function Slider() {
 
   function nextImg(e) {
     if(isSlideChanging === false) {
-      if (e.target.id[1] != currentImage.id) {
+      if (parseInt(e.target.id[1]) !== currentImage.id) {
         setIsSlideChanging(true);
         console.log(e.target.id[1]);
         console.log(currentImage.id)
@@ -48,7 +48,7 @@ function Slider() {
           }}
           onExited={()=>setIsSlideChanging(false)}
           timeout={{ enter: 1500, exit: 1500 }}>
-            <img src={currentImage.url} />
+            <img src={currentImage.url} alt="Slider img"/>
           </CSSTransition>
         </TransitionGroup>
       </div>

@@ -33,7 +33,10 @@ function Footer() {
         </div>
       </div>
       <div className={classes.credits}>
-        Copyright @ 2021 Znalezione &amp; Zatopione | Designed by Kamila Michałkiewicz | Coded by pawelgrabos.pl
+        Copyright @ 2021<br/>
+        Znalezione &amp;Zatopione<br/>
+        Designed by Kamila Michałkiewicz<br/>
+        Coded by pawelgrabos.pl
       </div>
     </div>
   )

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition } from 'react-transition-group';
 
 import classes from './MainNavigation.module.scss';
 
@@ -53,11 +53,6 @@ function MainNavigation() {
       onEntered={()=>{console.log("entered")}}
       onExited={()=>{console.log("exited");setIsNavFinishedClosing(true)}}
       timeout={{ enter: 300, exit: 300 }}>
-        {/* <div className={`${classes.verticalMenuBox} ${isNavOpen ? classes.verticalMenuBoxEnter : null}`}>
-          <div className={`${classes.verticalMenu} ${isNavOpen ? classes.verticalMenuOpened : null}`}>
-            {menuLinks}
-          </div>
-        </div> */}
         <div className={classes.verticalMenuBox}>
           <div className={`${classes.verticalMenu} ${isNavOpen ? classes.verticalMenuOpened : null}`}>
             {menuLinks}

@@ -1,6 +1,53 @@
 .footer {
   z-index: 0;
 
+  .footerInfo {
+    background-color: rgb(172, 204, 193);
+    margin-top: 50px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    padding: 50px 50px;
+
+    .logoBox {
+      h1 {
+        color: #fff;
+      }
+      p {
+        color: #000;
+      }
+    }
+    .contactBox {
+      h1 {
+        color: green;
+        font-size: 26px;
+        font-weight: 400;
+      }
+      p {
+        color: #000;
+      }
+      .circles {
+        display: flex;
+        justify-content: space-between;
+        .circle {
+          width: 40px;
+          height: 40px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+    .menuBox {
+      h1 {
+        color: green;
+        font-size: 26px;
+        font-weight: 400;
+      }
+      p {
+        color: #000;
+      }
+    }
+  }
   .mediaBanner {
     height: 300px;
     background: url('../../assets/images/footer-bg.jpg');
@@ -39,67 +86,11 @@
     margin-top: 170px;
     z-index: 1;
   }
-
-  .footerInfo {
-    //height: 300px;
-    background-color: rgb(172, 204, 193);
-    margin-top: 50px;
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.5;
-    padding: 50px 50px;
-    border: 1px solid red;
-
-    .logoBox {
-      //width: 40%;
-      //padding: 50px 50px;
-      
-      h1 {
-        color: #fff;
-      }
-      p {
-        color: #000;
-      }
-    }
-    .contactBox {
-      //width: 30%;
-      //padding-top: 50px;
-      h1 {
-        color: green;
-        font-size: 26px;
-        font-weight: 400;
-      }
-      p {
-        color: #000;
-      }
-      .circles {
-        display: flex;
-        justify-content: space-between;
-        .circle {
-          width: 40px;
-          height: 40px;
-          background-color: #fff;
-          border-radius: 50%;
-        }
-      }
-    }
-    .menuBox {
-      //padding-top: 50px;
-      //width: 30%;
-      h1 {
-        color: green;
-        font-size: 26px;
-        font-weight: 400;
-      }
-      p {
-        color: #000;
-      }
-    }
-  }
   .credits {
     text-align: center;
     padding: 10px 0;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
   }
 }
 
@@ -108,7 +99,28 @@
     flex-direction: column;
     text-align: center;
     
+    .menuBox {
+      padding-top: 20px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+  }
+  .footerInfo {
+    flex-direction: row;
+    text-align: left;
+
+    .logoBox {
+      width: 100%;
+    }
     .contactBox {
+      width: 240px;
+    }
+    .menuBox {
+      width: 300px;
+      padding-top: 0px;
+      text-align: center;
     }
   }
 }
