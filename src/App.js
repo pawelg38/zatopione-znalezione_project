@@ -13,7 +13,7 @@ function App() {
     <Layout scrollToAbout={onScrollToAbout}>
       <Switch>
         <Route path='/' exact>
-          <HomePage scrollToAbout={scrollRequest}/>
+          <HomePage scrollToAbout={scrollRequest} setScrollRequest={setScrollRequest}/>
         </Route>
         <Route path='/gallery'>
           <GalleryPage />

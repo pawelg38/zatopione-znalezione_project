@@ -2,12 +2,14 @@ import { useEffect } from 'react';
 import MediaBanner from '../components/layout/MediaBanner';
 import Slider from '../components/Slider';
 import classes from './Home.module.scss';
+import { Link } from 'react-router-dom';
 
 function HomePage(props) {
   useEffect(() => {
     if (props.scrollToAbout === true) {
       let element = document.getElementById("aboutSection");
       element.scrollIntoView({behavior: "smooth", block: "center"});
+      props.setScrollRequest(false);
     }
   });
 
@@ -20,7 +22,7 @@ function HomePage(props) {
           <div/>
         </div>
         <Slider></Slider>
-        <button className={classes.seeMoreBtn}>Zobacz więcej</button>
+        <Link to='/gallery' className={classes.seeMoreLink}>Zobacz więcej</Link>
       </div>
       <div id="aboutSection" className={classes.description2}>
         <p>Heeeejka! To moja praca z żywicą epoksydową.

@@ -3,7 +3,7 @@ import classes from './Gallery.module.scss';
 import Card from '../components/Card';
 
 function GalleryPage() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [loadedCards, setLoadedCards] = useState([]);
 
   useEffect( () => {
@@ -25,13 +25,6 @@ function GalleryPage() {
       setLoadedCards(cards);
     });
   }, []);
-  if (isLoading) {
-    return (
-      <section>
-        <p>Loading...</p>
-      </section>
-    );
-  }
 
   return (
     <div className={classes.cardsContainer}>
