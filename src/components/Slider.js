@@ -53,9 +53,9 @@ function Slider() {
         </TransitionGroup>
       </div>
       <div className={classes.buttonsContainer}>
-        <button id='s1' onClick={nextImg}></button>
-        <button id='s2' onClick={nextImg}></button>
-        <button id='s3' onClick={nextImg}></button>
+        <button id='s1' onClick={nextImg} className={currentImage.id === 1 ? classes.activeSliderButton : null}></button>
+        <button id='s2' onClick={nextImg} className={currentImage.id === 2 ? classes.activeSliderButton : null}></button>
+        <button id='s3' onClick={nextImg} className={currentImage.id === 3 ? classes.activeSliderButton : null}></button>
       </div>
     </div>
   )

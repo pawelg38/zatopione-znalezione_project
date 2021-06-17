@@ -4,24 +4,25 @@ import { CSSTransition } from 'react-transition-group';
 
 import classes from './MainNavigation.module.scss';
 
-function MainNavigation() {
+function MainNavigation(props) {
   const [isNavOpen, setNavOpen] = useState(false);
-  const [isNavFinishedClosing, setIsNavFinishedClosing] = useState(true);
 
   function toggleMenuHandler() {
     console.log(isNavOpen);
-    setIsNavFinishedClosing(false);
     setNavOpen(!isNavOpen);
   }
-
-  let menuLinks;
-  menuLinks = (
-    <>
-      <Link to='/gallery'>Galeria</Link>
-      <Link to='/'>O mnie</Link>
-      <Link to='/'>Kontakt</Link>
-    </>
-  )
+  function scrollToHandler(e) {
+    setNavOpen(false);
+    let element;
+    if (e.target.id === 'aboutLink') {
+      props.scrollToAbout();
+    }
+    else if(e.target.id === 'contactLink') {
+      e.preventDefault();
+      element = document.getElementById("contactSection");
+      element.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+  }
 
   return (
     <nav>
@@ -36,11 +37,6 @@ function MainNavigation() {
             <div />
           </div>
         </div>
-        {/* <div className={classes.horizontalMenu}>
-          <Link to='/gallery'>Galeria</Link>
-          <Link to='/'>O mnie</Link>
-          <Link to='/'>Kontakt</Link>
-        </div> */}
         <CSSTransition
         in={isNavOpen}
         classNames={{
@@ -49,28 +45,13 @@ function MainNavigation() {
           exit: classes.horizontalMenuExit,
           exitDone: classes.horizontalMenuExitDone
         }}
-        onExited={()=>{setIsNavFinishedClosing(true)}}
         timeout={{ enter: 300, exit: 300 }}>
           <div className={classes.horizontalMenu}>
-            <Link to='/gallery'>Galeria</Link>
-            <Link to='/'>O mnie</Link>
-            <Link to='/'>Kontakt</Link>
+            <Link to='/gallery' onClick={scrollToHandler}>Galeria</Link>
+            <Link id="aboutLink" to='/' onClick={scrollToHandler}>O mnie</Link>
+            <Link id="contactLink" to='/' onClick={scrollToHandler}>Kontakt</Link>
           </div>
         </CSSTransition>
-        {/* <CSSTransition
-        in={isNavOpen}
-        classNames={{
-          enter: classes.verticalMenuEnter,
-          enterDone: classes.verticalMenuEnterDone,
-          exit: classes.verticalMenuExit,
-          exitDone: classes.verticalMenuExitDone
-        }}
-        onExited={()=>{setIsNavFinishedClosing(true)}}
-        timeout={{ enter: 300, exit: 300 }}>
-          <div className={classes.verticalMenu}>
-            {menuLinks}
-          </div>
-        </CSSTransition> */}
       </div>
     </nav>
   );

@@ -1,8 +1,16 @@
+import { useEffect } from 'react';
+import MediaBanner from '../components/layout/MediaBanner';
 import Slider from '../components/Slider';
-
 import classes from './Home.module.scss';
 
-function HomePage() {
+function HomePage(props) {
+  useEffect(() => {
+    if (props.scrollToAbout === true) {
+      let element = document.getElementById("aboutSection");
+      element.scrollIntoView({behavior: "smooth", block: "center"});
+    }
+  });
+
   return (
     <div className={classes.container}>
       <div className={classes.seeMoreContainer}>
@@ -14,7 +22,7 @@ function HomePage() {
         <Slider></Slider>
         <button className={classes.seeMoreBtn}>Zobacz więcej</button>
       </div>
-      <div className={classes.description2}>
+      <div id="aboutSection" className={classes.description2}>
         <p>Heeeejka! To moja praca z żywicą epoksydową.
           Wszelkie rośliny w niej zatopione zebrałam, zasłużyłam i ułożyłam sama.
           Jestem perfekcjonistką, a że w żywiczną sztukę bawię się od niedawna
@@ -23,6 +31,7 @@ function HomePage() {
           Zapraszam więc do kupna poprzez Vinted moich niedoskonałych
           ale zrobionych z serduchem żywicznych wisiorków.</p>
       </div>
+      <MediaBanner />
     </div>
   );
 }

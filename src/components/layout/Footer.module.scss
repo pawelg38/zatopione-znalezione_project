@@ -3,7 +3,6 @@
 
   .footerInfo {
     background-color: rgb(172, 204, 193);
-    margin-top: 50px;
     display: flex;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
@@ -48,44 +47,6 @@
       }
     }
   }
-  .mediaBanner {
-    height: 300px;
-    background: url('../../assets/images/footer-bg.jpg');
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    &::after {
-      content: '';
-      display: block;
-      height: 200px;
-      width: 100%;
-      background-color: #fff;
-      position: absolute;
-      top: calc(100% - 100px);
-      border-radius: 50%;
-      left: 0;
-    }
-  }
-  .someLogo1 {
-    width: 50px;
-    height: 50px;
-    background-color: #000;
-    border-radius: 50%;
-    margin: 0 5%;
-    margin-top: 180px;
-    z-index: 1;
-  }
-  .someLogo2 {
-    width: 50px;
-    height: 50px;
-    background-color: #000;
-    border-radius: 50%;
-    margin: 0 5%;
-    margin-top: 170px;
-    z-index: 1;
-  }
   .credits {
     text-align: center;
     padding: 10px 0;
@@ -105,8 +66,6 @@
   }
 }
 @media (min-width: 1024px) {
-  .footer {
-  }
   .footerInfo {
     flex-direction: row;
     text-align: left;
@@ -121,6 +80,18 @@
       width: 300px;
       padding-top: 0px;
       text-align: center;
+    }
+  }
+  .credits {
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    //line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    p {
+      //border: 1px solid red;
+      margin: 0 10px;
     }
   }
 }

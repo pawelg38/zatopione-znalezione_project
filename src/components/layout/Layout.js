@@ -7,11 +7,11 @@ function Layout(props) {
 
   return (
     <div>
-      <MainNavigation />
+      <MainNavigation scrollToAbout={props.scrollToAbout}/>
       <PageImageBar/>
       <Header />
       {props.children}
-      <Footer />
+      <Footer/>
     </div>
   );
 }
